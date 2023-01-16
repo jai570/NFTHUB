@@ -33,7 +33,11 @@ const Alert = () => {
         )} */}
         <p className="text-white my-3">
           {console.log(alert.msg, "alert msg first time")}
-          {alert.msg.length == 2 ? "Welcome" : "error occoured"}
+          {alert.msg.length == 2
+            ? "Welcome"
+            : alert.color == "red"
+            ? "error occoured"
+            : alert.msg}
         </p>
       </div>
     </div>
